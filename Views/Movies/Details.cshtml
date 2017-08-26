@@ -1,0 +1,43 @@
+﻿@model MvcMovie.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<fieldset>
+    <legend>Movie</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Titulo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Titulo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FechaLanzamiento)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FechaLanzamiento)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Genero)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Genero)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Precio)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Precio)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>
